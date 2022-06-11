@@ -13,7 +13,7 @@ app = Client(
 
 
         
-@app.on_message(filters.chat("@wk82rqjj82jwjwjwkw788828") & filters.text)
+@app.on_message(filters.private & filters.text)
 def dspam(client, message):
     if '/challenge raju' in message.text:
 
@@ -61,7 +61,7 @@ def dspam(client, message):
 
     for i in range(0, 3):
         try:
-            message.click()
+            message.click("Ready ✅")
             time.sleep(0.3)
         except:
             pass 
